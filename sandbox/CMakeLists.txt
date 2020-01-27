@@ -1,0 +1,5 @@
+foreach(example_name example01 example02 test01 test02 demo)
+  add_executable(${example_name} ${CODING} "${example_name}.cpp")
+  target_link_libraries(${example_name} ${Boost_UNIT_TEST_FRAMEWORK_LIBRARIES})
+  add_test(NAME ${example_name} COMMAND ${example_name})
+endforeach()
