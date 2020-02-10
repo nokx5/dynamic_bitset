@@ -1,20 +1,18 @@
-#include <iostream>
 #include <bitset>
+#include <iostream>
 // #include <stdint.h>
 // #include <inttypes.h>
 
-int main( void )
-{
+int main(void) {
 
-  size_t shift;
-   for ( shift = 0; shift < 64; ++shift )
-   {
-     uint64_t a = (1ULL << shift), b = (1 << shift);
-     std::cout << "shift =" << shift << ", a =" << std::bitset<64>(a) << ", b =" << std::bitset<64>(b) << std::endl;
-     
-   }
+    size_t shift;
+    for (shift = 0; shift < 64; ++shift) {
+        uint64_t a = (1ULL << shift), b = (1 << shift);
+        std::cout << "shift =" << shift << ", a =" << std::bitset<64>(a)
+                  << ", b =" << std::bitset<64>(b) << std::endl;
+    }
 
-   return 0;
+    return 0;
 }
 
 /* my output (trimmed)

@@ -1,16 +1,14 @@
-#include <stdio.h>
-#include <stdint.h>
 #include <inttypes.h>
+#include <stdint.h>
+#include <stdio.h>
 
-int main( )
-{
-   int shift;
-   for ( shift = 0; shift < 64; ++shift )
-   {
-      uint64_t a = 1ULL << shift, b = 1 << shift;
-      printf("shift = %2d, a = %016"PRIx64", b = %016"PRIx64"\n", shift, a, b);
-   }
-   return 0;
+int main() {
+    int shift;
+    for (shift = 0; shift < 64; ++shift) {
+        uint64_t a = 1ULL << shift, b = 1 << shift;
+        printf("shift = %2d, a = %016" PRIx64 ", b = %016" PRIx64 "\n", shift, a, b);
+    }
+    return 0;
 }
 
 /* my output (trimmed)
