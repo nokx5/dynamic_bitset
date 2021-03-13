@@ -1,16 +1,9 @@
-
-#define BOOST_TEST_MODULE unit_field_matrix
-#include <boost/test/included/unit_test.hpp>
-
-// previously
-// #include <boost/test/unit_test.hpp>
-// then
-// #define BOOST_TEST_MODULE unit_field_matrix
-// #include <boost/test/unit_test.hpp>
-// or
 // #define BOOST_TEST_MODULE unit_field_matrix
 // #define BOOST_TEST_DYN_LINK
-// #include <boost/test/unit_test.hpp>
+#include <boost/test/unit_test.hpp>
+
+// try it out :
+// #include <boost/test/included/unit_test.hpp>
 
 // BOOST_AUTO_TEST_SUITE( Matrix )
 
@@ -23,9 +16,8 @@
 // bfl::bitset<int32_t>
 
 #include <boost/mpl/list.hpp>
-typedef boost::mpl::list<bfl::bitset<int32_t>>
-    test_types;  // bfl::bitset<int8_t>, bfl::bitset<int16_t>,  //
-                 // bfl::bitset<int>bfl::matrix<bfl::bitset<int8_t>>,
+typedef boost::mpl::list<bfl::bitset<int8_t>, bfl::bitset<int16_t>, bfl::bitset<int>>
+    test_types;
 #include <boost/test/output_test_stream.hpp>
 using boost::test_tools::output_test_stream;
 
@@ -96,7 +88,7 @@ bool correctMessage(const std::logic_error& ex) {
 
 BOOST_AUTO_TEST_CASE_TEMPLATE(test06_operator_index, T, test_types) {
     bfl::matrix<T> mat(2, 3);
-    BOOST_CHECK_EXCEPTION(mat(4, 4), std::logic_error, correctMessage);
+    // BOOST_CHECK_EXCEPTION(mat(4, 4), std::logic_error, correctMessage);
     mat(1, 2);
     // mat(0,0) = 1;
     BOOST_TEST(true);

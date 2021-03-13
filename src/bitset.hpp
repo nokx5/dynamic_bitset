@@ -3,6 +3,7 @@
 
 #include <algorithm>
 #include <climits>  // for CHAR_BIT
+#include <ostream>
 #include <stdexcept>
 #include <string>
 #include <vector>

@@ -172,6 +172,10 @@ dkms.conf
 *.gcov
 
 ## CUSTOM ######################################################################
-.b*
-**/build
+build
+build_cpu
+build_gpu
+b
+bu
+bui
 tests/sandbox
