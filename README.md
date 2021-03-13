@@ -10,13 +10,11 @@ std::bitset<2> bits; // in /usr/include/c++/7/bitset
 ```
 2. then looked into boost
 ```
-boost::dynamic_bitset<int> bits;
-boost/dynamic_bitset/dynamic_bitset.hpp
+boost::dynamic_bitset<int> bits; // in boost/dynamic_bitset/dynamic_bitset.hpp
 ```
 3. and finally adapted from
 ```
-Boost.Compute \c dynamic_bitset
-boost/compute/container/dynamic_bitset.hpp
+Boost.Compute \c dynamic_bitset // in boost/compute/container/dynamic_bitset.hpp
 ```
 
 This is a header only library.

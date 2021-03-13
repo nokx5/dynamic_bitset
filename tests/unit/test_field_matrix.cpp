@@ -29,7 +29,7 @@ BOOST_AUTO_TEST_CASE(test00_boost_test_unit) {
 BOOST_AUTO_TEST_CASE_TEMPLATE(test01_constructor_destructor, T, test_types) {
     bfl::matrix<T> mat1;
     {
-        bfl::matrix<T> mat2();
+        bfl::matrix<T> mat2{};
         BOOST_TEST(true);
     }
     BOOST_TEST(true);
