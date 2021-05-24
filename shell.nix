@@ -9,13 +9,11 @@ in (mkShell.override { inherit stdenv; }) rec {
     gnumake
     cmake
     ninja
-    meson
     pkgconfig
     binutils-unwrapped
     gdb
-    llvm
+    # llvm
     # valgrind
-    catch2
   ] ++ lib.optional (!clangSupport) [ gcovr lcov ]; # [ sssd cacert ]
 
   buildInputs = [

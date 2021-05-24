@@ -21,32 +21,12 @@ This is a header only library.
 
 ## Hard coded nix-shell
 Enter the hard coded nix shell with
+
 ```bash
-nix-shell -I nixpkgs=https://nixos.org/channels/nixpkgs-unstable --pure default.shell.nix
+nix-shell -I nixpkgs=https://nixos.org/channels/nixpkgs-unstable --pure
 
-nix-shell --pure default.shell.nix --arg clangSupport true
+nix-shell --pure --arg clangSupport true
 ```
-
-## Packaging
-To use following command, you would need a nokx packaging repository
-
-- Enter the nix shell
-
-  ```bash
-  nix-shell -I nokxpkgs=/path2nokxpkgs/ -I nixpkgs=$PWD -A golden_cpp
-  ```
-
-- Build the project
-
-  ```bash
-  nix-build -I nokxpkgs=/path2nokxpkgs/ -I nixpkgs=$PWD -A golden_cpp
-  ```
-
-- Use the project
-
-  ```bash
-  nix-shell -I nokxpkgs=/path2nokxpkgs/ -I nixpkgs=$PWD -p golden_cpp
-  ```
 
 ## format
 One line code formatter for pure cpp projects
